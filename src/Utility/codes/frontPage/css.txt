@@ -1,0 +1,472 @@
+@import 'normalize';
+
+body {
+  font-size: 16px;
+  margin: 0;
+}
+/*Content*/
+
+.background {
+  min-height: 1000px
+}
+
+.content {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/*Header*/
+header {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  height: 7rem;
+  z-index: 5;
+}
+
+header img {
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 4rem;
+  align-self: center;
+}
+
+h1 span {
+  font-size: .75rem;
+}
+
+header button {
+  width: 8rem;
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 1000px) {
+
+  header button {
+    position: relative;
+    right: 1rem;
+    bottom: .5rem;
+    width: 15%;
+    font-size: 1rem;
+    border: none;
+    align-self: flex-end;
+    text-decoration: underline;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h1 span {
+    display: none;
+  }
+
+}
+@media only screen and (max-width: 350px){
+  header button {
+    right: 1.5rem;
+  }
+}
+
+/*Topics*/
+
+.topics {
+  position: fixed;
+  top: 7rem;
+  margin-top: 7rem;
+  width: 50rem;
+  height: 25rem;
+  border: solid 2px black
+}
+
+.topics h2 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  width: 100%;
+  height: 20rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.input-group {
+  width: 30%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-group label {
+  margin: 1rem;
+}
+
+#submit {
+  font-size: 2rem;
+  width: 30%;
+}
+
+@media only screen and (max-width: 1000px){
+
+  .topics {
+    margin-top: 5rem;
+    width: 75%;
+    height: fit-content;
+  }
+
+  form {
+    height: 90%;
+    margin-bottom: 1.5rem;
+  }
+
+  .input-group {
+    margin: 1rem;
+  }
+
+  #submit {
+    width: 90%;
+  }
+
+}
+/*Article previews*/
+
+.preview-container {
+  width: 75%;
+  max-width: 1100px;
+  margin: 6rem auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.article-preview {
+  width: 25%;
+  min-width: 275px;
+  height: 26rem;
+  margin: 2rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5%;
+}
+
+.article-preview h2 {
+  width: 95%;
+  overflow: hidden;
+  font-size: 1.4rem;
+}
+
+.large-title {
+  font-size: 1rem !important;
+  max-height: 140px;
+}
+
+.thumbnail {
+  width: 60%;
+}
+
+.thumbnail-text {
+  width: 60%;
+  text-align: left;
+  font-size: .70rem;
+  max-height: 150px;
+  overflow: hidden;
+  padding: .5rem;
+}
+
+.article-preview .upVotes {
+  width: 20%;
+  font-size: .75rem;
+  padding: 1.5rem 0;
+}
+
+.filler {
+  width: 20%;
+}
+
+hr {
+  width: 90%;
+}
+
+.footer {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  font-size: .5rem;
+}
+
+@media only screen and (max-width: 1000px){
+  .preview-container {
+    width: 100%;
+  }
+}
+
+/*article-awards*/
+
+.award-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%;
+}
+
+.award-container img {
+  width: 1rem;
+  height: 1rem;
+}
+
+.award {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: .125rem;
+  height: 1.8rem;
+}
+
+.award p {
+  margin-left: .07rem;
+}
+
+.upVotes {
+  background-image: url('./utility/images/arrows.png');
+  background-size: cover;
+  background-position: center;
+  
+}
+
+/*Article*/
+
+article {
+  margin-top: 7.5rem;
+  width: 60%; 
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.article-header {
+  display: flex;
+  width: 100%;
+}
+
+.back-button {
+  display: flex;
+  justify-content: center;
+  width: 10%;
+  height: 1.5rem;
+  position: relative;
+  top: .75rem;
+  left: .75rem;
+}
+
+article button {
+  border: none;
+}
+
+article h2 {
+  padding-top: 2rem;
+  text-align: center;
+  width: 80%;
+}
+
+.article-content {
+  width: 80%;
+  height: 25rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-around;
+}
+
+.article-content a {
+  width: 100%;
+  text-align: center;
+}
+
+.article-content img {
+  max-width: 50%;
+  max-height: 50%;
+}
+
+.article-content-single {
+  width: 80%;
+  height: 40rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: center;
+}
+
+.article-content-single video,
+.article-content-single img {
+  max-height: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.article-text {
+  width: 80%;
+}
+
+.article-footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 3rem;
+  width: 60%;
+  margin: 2rem 0;
+}
+
+.up-votes {
+  display: flex;
+}
+
+.votes {
+  margin: 0 .5rem;
+}
+
+.up-votes img {
+  width: 1rem;
+}
+
+@media only screen and (max-width: 1000px){
+
+  article {
+    width: 95%;
+  }
+
+  .back-button {
+    font-size: .5rem;
+  }
+
+  .article-footer {
+    font-size: .5rem;
+    width: 80%;
+  }
+
+  .article-content-single video,
+  .article-content-single img {
+  max-height: 50%;
+  align-self: center;
+}
+
+}
+
+/*Comments*/
+
+.comments-container {
+  height: 700px;
+  overflow: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.comments {
+  width: 75%;
+  padding-bottom: 3rem;
+  margin: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.comments-header {
+  display: flex;
+  height: 5rem;
+  width: 100%;
+}
+
+.comments-header img {
+  border-radius: 50%;
+  margin: 1rem;
+}
+
+.comments-header h2 {
+  margin: 0 3rem;
+  align-self: center;
+  text-align: left;
+}
+
+.comments-body {
+  text-align: center;
+  width: 60%;
+  margin: 1rem 5rem;
+  line-height: 1.5rem;
+  overflow: hidden;
+} 
+
+.comments .up-votes {
+  margin: .6rem;
+  width: auto;
+}
+
+@media only screen and (max-width: 500px) {
+  
+  .comments-body {
+    width: 90%;
+    font-size: .75rem;
+    margin: 1rem .3rem;
+  }
+
+  .comments-header img {
+   height: 2rem;
+   margin-right: 0;
+  }
+
+  .comments-header h2 {
+    margin: 0 1rem;
+    font-size: .8rem;
+  }
+
+}
+
+/*Settings*/
+
+nav {
+  position: fixed;
+  right: 0;
+  top: 7rem;
+  width: 12.6%;
+}
+
+nav ul {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav li {
+  list-style: none;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 2rem;
+}
+
+.coming-soon {
+  text-decoration: line-through;
+}
+
+@media only screen and (max-width: 1000px) {
+  nav {
+    width: 20%;
+    min-width: 100px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  nav li {
+    font-size: 1rem;
+  }
+}

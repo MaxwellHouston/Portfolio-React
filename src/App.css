@@ -3,7 +3,7 @@
 }
 
 .side-bar {
-  width: 30%;
+  width: 20%;
   background-color: black;
   color: white;
 }
@@ -26,8 +26,18 @@
 }
 
 .project-body {
-  width: 65%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.info {
+  width: 49%;
+}
+
+.code-viewer {
+  width: 50%;
+  height: 100%;
+  display: grid;
+  grid-template: 15% 1fr 10% / 1fr;
 }

@@ -48,6 +48,11 @@ import appointmentImg from '../Utility/codes/appointment/img.jpg';
 import appointmentHTML from '../Utility/codes/appointment/html.txt';
 import appointmentCSS from '../Utility/codes/appointment/css.txt';
 import appointmentJS from '../Utility/codes/appointment/js.txt';
+//Front Page
+import frontPageImg from '../Utility/codes/frontPage/img.jpg';
+import frontPageHTML from '../Utility/codes/frontPage/html.txt';
+import frontPageCSS from '../Utility/codes/frontPage/css.txt';
+import frontPageJS from '../Utility/codes/frontPage/js.txt';
 //Empty
 import empty from '../Utility/codes/empty.txt';
 
@@ -105,13 +110,12 @@ const ProjectData = {
         article: `This project is a Reddit client that acts as a  homepage that takes users input for topics that interest them and displays reddit articles pertaining to that topic. 
         It was built using React, React Router, and Redux. All of the data is pulled from the Reddit API. Each topic chosen pulls the top three articles from three diffrent subreddits pertaining to the topic. These articles are then
         displayed in a grid with tumbnail photos and a link to the full article. When clicked, this link opens up that article to fill the whole page and displays the awards, upvotes, the body of
-        the article, and also fetches and displays the comments section.`,
-        github: 'https://github.com/MaxwellHouston/appointment-planner',
-        img: appointmentImg,
-        html: appointmentHTML,
-        css: appointmentCSS,
-        js: appointmentJS,
-
+        the article, and also fetches and displays the comments section. Only the components are showed in the code viewer, to view the Redux store and slice files go to the github project link.`,
+        github: 'https://github.com/MaxwellHouston/front-page',
+        img: frontPageImg,
+        html: frontPageHTML,
+        css: frontPageCSS,
+        js: frontPageJS,
     },
     more: {
         name: 'More',
