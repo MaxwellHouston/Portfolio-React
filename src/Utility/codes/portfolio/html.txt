@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Max Houston's Portfolio</title>
+        <link href="./CSS/style.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&family=Rubik:ital,wght@0,400;1,700&display=swap" rel="stylesheet">    <body>
+        <header>
+            <img src="Images/logo.png" alt="Portfolio by: Max Houston"/>
+            <nav>
+                <ul>
+                    <li><button id="about-button" type="button">About Me</button></li>
+                    <li><button id="game-button" type="button">Game Of War</button></li>
+                    <li><button id="island-button" type="button">Island Golf</button></li>
+                    <li><button id="portfolio button" type="button">Portfolio Site</button></li>
+                    <li><button id="more-button" type="button">More Projects</button></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div id="code-box">
+                <div id="code-title">
+                    <h2>Code Viewer</h2>
+                </div>
+                <div id="code-viewer">
+                    <object data="./library sorter.txt"></object>
+                </div>
+                <nav id="code-options">
+                    <ul>
+                        <li><button id="img-button" type="button">Image</button></li>
+                        <li><button id="html-button" type="button">HTML</button></li>
+                        <li><button id="css-button" type="button">CSS</button></li>
+                        <li><button id="script-button" type="button">JS</button></li>
+                    </ul>
+                </nav>
+            </div>
+            <article id="about">
+                <h1>About Me</h1>
+                <p> My name is Max Houston and I am currently learning how to be a full stack engineer through Codecademy. 
+                    This website is my portfolio for the work I have completed so far. The main projects will have a code 
+                    viewer on the left side of the screen that shows the different code for each project and a description 
+                    of the project on the right. The more projects page will have a list of other work and have links to 
+                    their GitHub repositories. I will be updating this site regularly with new contentent and my GitHub 
+                    page will always have my most recent work. I would love to hear any feedback you have on my projects 
+                    as I still have a whole lot to learn. Below is the link to my GitHub page and my email address. 
+                </p>
+                <p>Email address: <span>maxhouston@gmail.com</span><br>
+                   Github page: <a href="https://github.com/MaxwellHouston">https://github.com/MaxwellHouston</a>
+                </p>
+            </article>
+            <article id="game">
+                <h1>Game<br>Of War</h1>
+                <p>This is a personal project that I started when learning JavaScript. It began as just building a
+                    deck of cards as an array but as I learned more it grew into a full game. Then while learning 
+                    then while learning HTML and CSS I made it playable on a web browser. Everytime I learn something
+                    relevant I add to the project.
+                </p>
+                <div class="lang game">
+                    <h3>Languages Used</h3>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>                  
+            </article>
+            <article id="island">
+                <h1>Island Golf</h1>
+                <p>This is a fake website I made for the Codecademy project - Responsive Club Website. It is based
+                    around a fake golf club and it was made primarily with flex box, percentages, and rem units to
+                    resize and fit any screen. The next step will be to add JavaScript to make the sections seperate,
+                    similar to this website.
+                </p>
+                <div class="lang island">
+                    <h3>Languages Used</h3>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                </div>
+            </article>
+            <article id="portfolio">
+                <h1>Portfolio</h1>
+                <p>This site is the portfolio webpage I made for the Codecademy project - Personal Portfolio
+                    Website. The layout is made on a grid with the sections being flex boxes. All of the buttons
+                    and transitions were made with JavaScript. This page will be updated whenever I complete a 
+                    project.
+                </p>
+                <div class="lang portfolio">
+                    <h3>Language Used</h3>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+            </article>
+            <article id="more">
+                <h1>More Projects</h1>
+                <table id="project-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Project Name</th>
+                            <th scope="col">HTML</th>
+                            <th scope="col">CSS</th>
+                            <th scope="col">JS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="project" id="flexbox">Flexbox Homepage</td>
+                            <td>&times;</td>
+                            <td>&times;</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td class="project" id="fotomatic">Fotomatic</td>
+                            <td>&times;</td>
+                            <td>&times;</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td class="project" id="cheatSheet">Cheat Sheet</td>
+                            <td>&times;</td>
+                            <td>&times;</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td class="project" id="styleGuide">Style Guide</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>&times;</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">Click project to display in Code Viewer</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </article>
+        </main>
+    </body>
+</html>
