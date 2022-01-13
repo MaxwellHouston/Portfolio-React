@@ -11,8 +11,6 @@ const CodeViewer = ({project}) => {
         setViewType(input);
     }
 
-
-
     return(
         <div className='code-viewer'>
             <div className='code-title'>

@@ -11,7 +11,6 @@ const CodeWindow = ({project, view}) => {
             return <object data={project[view]}>code</object>
         }
     }
-
     return(
         <div className="code-window">
             {renderMedia()}
