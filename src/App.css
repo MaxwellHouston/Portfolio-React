@@ -3,10 +3,16 @@
   src: url('./Utility/fonts/Axis\ Extrabold.otf');
 }
 
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('./Utility/fonts/AtkinsonHyperlegible-Regular.ttf');
+}
+
 .App {
   display: flex;
   width: 99vw;
   height: 99vh;
+  font-family: 'Atkinson Hyperlegible';
 }
 
 /*    Side Bar     */
@@ -51,9 +57,41 @@
 }
 
 .info {
-  width: 49%;
+  width: 50%;
+  height: 99vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #d4d3d3;
 }
 
+h1 {
+  font-family: 'AXIS';
+  font-weight: bold;
+  font-size: 5rem;
+  text-align: center;
+  color: #303030;
+  text-shadow: 3px 3px 5px black;
+  align-self: center;
+}
+
+.article {
+  width: 80%;
+  background-color: #303030;
+  color: white;
+  padding: 2.5rem;
+  align-self: center;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  box-shadow: 5px 5px 5px black;
+}
+
+.email,
+.github {
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+}
 
 /*      Code Viewer     */
 .code-viewer {
@@ -61,13 +99,14 @@
   height: 99vh;
   display: grid;
   grid-template: 15% 75% 10% / 1fr;
+  border: 2px solid black;
 }
 
 .code-title {
   background-color: #303030;
   color: white;
+  text-shadow: 3px 3px 5px black;
   text-align: center;
-  font-family: 'AXIS';
   font-size: 3rem;
   word-spacing: 10px;
   letter-spacing: 3px;
@@ -76,11 +115,10 @@
 .code-window {
   display: flex;
   justify-content: center;
-  background-color: #d4d3d3;
 }
 
 object {
-  width: 80%;
+  width: 100%;
   background-color: white;
 }
 

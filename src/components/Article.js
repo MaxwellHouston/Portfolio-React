@@ -11,7 +11,8 @@ const Article = ({project}) => {
             <div className="info">
                 <h1>{project.header}</h1>
                 <p className="article">{project.article}</p>
-                {project.email ? <p className="email-github">{project.email}  {project.github}</p> : <p className="github">{project.github}</p>}
+                {project.email && <p className="email">Email: <a href={`mailto:${project.email}`}>{project.email}</a></p>}
+                <p className="github">Github: <a href={project.github}>{project.github}</a></p>
             </div>
             <CodeViewer project={project} />
         </div>
