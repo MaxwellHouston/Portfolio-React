@@ -8,6 +8,11 @@
   src: url('./Utility/fonts/AtkinsonHyperlegible-Regular.ttf');
 }
 
+@font-face {
+  font-family: 'Open Sans', sans-serif;;
+  src: url('./Utility/fonts/OpenSans-Regular.ttf');
+}
+
 .App {
   display: flex;
   width: 99vw;
@@ -79,6 +84,7 @@ h1 {
   width: 80%;
   background-color: #303030;
   color: white;
+  font-family: 'OpenSans-Regular';
   padding: 2.5rem;
   align-self: center;
   font-size: 1.2rem;
