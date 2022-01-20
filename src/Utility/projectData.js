@@ -118,77 +118,65 @@ const ProjectData = {
         js: frontPageJS,
     },
     more: {
-        name: 'More',
-        section: 'none',
-        value: 'more',
-        img: flexboxImg,
-        html: flexboxHTML,
-        css: flexboxCSS,
-        //js: flexboxJS,
+        flexbox: {
+            name: 'Flexbox',
+            value: 'flexbox',
+            img: flexboxImg,
+            html: flexboxHTML,
+            css: flexboxCSS,
+            //js: flexboxJS,
+            github: <a href="https://github.com/MaxwellHouston/Flexbox-Homepage">Link</a>
     },
-    flexbox: {
-        name: 'Flexbox',
-        section: 'more',
-        value: 'flexbox',
-        img: flexboxImg,
-        html: flexboxHTML,
-        css: flexboxCSS,
-        //js: flexboxJS,
+      fotomatic:  {
+            name: 'Fotomatic',
+            img: fotomaticImg,
+            html: fotomaticHTML,
+            css: fotomaticCSS,
+            //js: fotomaticJS,
+            github: <a href="https://github.com/MaxwellHouston/Fotomatic">Link</a>
     },
-    fotomatic: {
-        name: 'Fotomatic',
-        section: 'more',
-        value: 'fotomatic',
-        img: fotomaticImg,
-        html: fotomaticHTML,
-        css: fotomaticCSS,
-        //js: fotomaticJS,
+      cheatSheet:  {
+            name: 'CheatSheet',
+            img: cheatSheetImg,
+            html: cheatSheetHTML,
+            css: cheatSheetCSS,
+            //js: cheatSheetJS,
+            github: <a href="https://github.com/MaxwellHouston/CheatSheet">Link</a>
     },
-    cheatSheet: {
-        name: 'CheatSheet',
-        section: 'more',
-        value: 'cheatSheet',
-        img: cheatSheetImg,
-        html: cheatSheetHTML,
-        css: cheatSheetCSS,
-        //js: cheatSheetJS,
+      styleGuide:  {
+            name: 'Style Guide',
+            img: styleGuideImg,
+            html: styleGuideHTML,
+            css: styleGuideCSS,
+            //js: styleGuideJS,
+            github: <a href="https://github.com/MaxwellHouston/Web-Design-System">Link</a>
     },
-    styleGuide: {
-        name: 'Style Guide',
-        section: 'more',
-        value: 'styleGuide',
-        img: styleGuideImg,
-        html: styleGuideHTML,
-        css: styleGuideCSS,
-        //js: styleGuideJS,
+      golfIsland:  {
+            name: 'Golf Island',
+            img: golfIslandImg,
+            html: golfIslandHTML,
+            css: golfIslandCSS,
+            //js: golfIslandJS,
+            github: <a href="https://github.com/MaxwellHouston/Responsive-Club-Website">Link</a>
     },
-    golfIsland: {
-        name: 'Golf Island',
-        section: 'more',
-        value: 'golfIsland',
-        img: golfIslandImg,
-        html: golfIslandHTML,
-        css: golfIslandCSS,
-        //js: golfIslandJS,
+      portfolio:  {
+            name: 'Portfolio',
+            img: portfolioImg,
+            html: portfolioHTML,
+            css: portfolioCSS,
+            js: portfolioJS,
+            github: <a href="https://github.com/MaxwellHouston/Porfolio-react">Link</a>
     },
-    portfolio: {
-        name: 'Portfolio',
-        section: 'more',
-        value: 'portfolio',
-        img: portfolioImg,
-        html: portfolioHTML,
-        css: portfolioCSS,
-        js: portfolioJS,
-    },
-    appointment: {
-        name: 'Appointment',
-        section: 'more',
-        value: 'appointment',
-        img: appointmentImg,
-        html: appointmentHTML,
-        css: appointmentCSS,
-        js: appointmentJS,
+      appointment:  {
+            name: 'Appointment',
+            img: appointmentImg,
+            html: appointmentHTML,
+            css: appointmentCSS,
+            js: appointmentJS,
+            github: <a href="https://github.com/MaxwellHouston/appointment-planner">Link</a>
+     }
     }
+    
     
 }
 

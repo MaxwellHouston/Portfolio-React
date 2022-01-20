@@ -1,0 +1,48 @@
+import React from "react";
+import '../App.css';
+import projectData from "../Utility/projectData";
+
+const ProjectTable = ({toggleArticle}) => {
+
+    const populateTable = () => {
+        let projectArray = [];
+        for( const project in projectData.more) {
+            projectArray.push(
+                <tr key={projectData.more[project].name}>
+                    <td><button value={project} onClick={handleClick} >{projectData.more[project].name}</button></td>
+                    <td>{projectData.more[project].github}</td>
+                    <td>{projectData.more[project].html ? String.fromCharCode(215) : '-'}</td>
+                    <td>{projectData.more[project].css ? String.fromCharCode(215) : '-'}</td>
+                    <td>{projectData.more[project].js ? String.fromCharCode(215) : '-'}</td>
+                </tr>
+            );
+       }
+       return projectArray;
+    };
+
+    const handleClick = ({target}) => {
+        let newProject = projectData.more[target.value];
+        toggleArticle(newProject);
+    }
+
+    return(
+        <div className="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Project Name</th>
+                        <th scope="col">Git Hub</th>
+                        <th scope="col">HTML</th>
+                        <th scope="col">CSS</th>
+                        <th scope="col">JS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {populateTable()}
+                </tbody>
+            </table>
+        </div>
+    )
+}
+
+export default ProjectTable;

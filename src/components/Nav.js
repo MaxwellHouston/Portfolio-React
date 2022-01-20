@@ -8,8 +8,8 @@ const Nav = () => {
 
     return(
         <div className="side-bar">
-            <img src={logo} alt="Portfolio Logo" />
-            <ul>
+            <img id='logo' src={logo} alt="Portfolio Logo" />
+            <ul className="nav-list">
                 <Link className="link" to="/"><li>About</li></Link>
                 <Link className="link" to="/game-of-war"><li>Game of War</li></Link>
                 <Link className="link" to="/calculator"><li>Calculator</li></Link>

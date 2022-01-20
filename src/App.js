@@ -3,6 +3,7 @@ import Nav from './components/Nav';
 import { Routes, Route } from 'react-router-dom';
 import Article from './components/Article';
 import projectData from './Utility/projectData';
+import MoreArticles from './components/MoreArticles';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
             <Route path='game-of-war' element={<Article project={projectData.gameOfWar} />} />
             <Route path='calculator' element={<Article project={projectData.calculator} />} />
             <Route path='front-page' element={<Article project={projectData.frontPage} />} />
-            <Route path='more' element={<Article project={'More'} />} /> 
+            <Route path='more' element={<MoreArticles />} /> 
         </Routes>
       </div>
         
