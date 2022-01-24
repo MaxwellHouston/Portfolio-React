@@ -9,8 +9,8 @@ const ProjectTable = ({toggleArticle}) => {
         for( const project in projectData.more) {
             projectArray.push(
                 <tr key={projectData.more[project].name}>
-                    <td><button value={project} onClick={handleClick} >{projectData.more[project].name}</button></td>
-                    <td>{projectData.more[project].github}</td>
+                    <td><button value={project} onClick={handleClick} className="smaller">{projectData.more[project].name}</button></td>
+                    <td className="smaller">{projectData.more[project].github}</td>
                     <td>{projectData.more[project].html ? String.fromCharCode(215) : '-'}</td>
                     <td>{projectData.more[project].css ? String.fromCharCode(215) : '-'}</td>
                     <td>{projectData.more[project].js ? String.fromCharCode(215) : '-'}</td>
@@ -40,6 +40,11 @@ const ProjectTable = ({toggleArticle}) => {
                 <tbody>
                     {populateTable()}
                 </tbody>
+                <tfoot className="smaller">
+                    <tr>
+                        <td colSpan="5">Click project to display in Code Viewer</td>
+                    </tr>
+                </tfoot>
             </table>
         </div>
     )
