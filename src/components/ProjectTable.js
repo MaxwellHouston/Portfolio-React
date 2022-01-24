@@ -2,14 +2,28 @@ import React from "react";
 import '../App.css';
 import projectData from "../Utility/projectData";
 
-const ProjectTable = ({toggleArticle}) => {
+const ProjectTable = ({toggleArticle, moreArticle}) => {
+
+    const highlight = (project) => {
+        if(project === moreArticle.name){
+            return {
+                color: 'red'
+            }
+        } else {
+            return null;
+        }
+    };
 
     const populateTable = () => {
         let projectArray = [];
         for( const project in projectData.more) {
             projectArray.push(
                 <tr key={projectData.more[project].name}>
-                    <td><button value={project} onClick={handleClick} className="smaller">{projectData.more[project].name}</button></td>
+                    <td>
+                    <button value={project} onClick={handleClick} className="smaller" id={project} style={highlight(projectData.more[project].name)}>
+                    {projectData.more[project].name}
+                    </button>
+                    </td>
                     <td className="smaller">{projectData.more[project].github}</td>
                     <td>{projectData.more[project].html ? String.fromCharCode(215) : '-'}</td>
                     <td>{projectData.more[project].css ? String.fromCharCode(215) : '-'}</td>
@@ -23,7 +37,7 @@ const ProjectTable = ({toggleArticle}) => {
     const handleClick = ({target}) => {
         let newProject = projectData.more[target.value];
         toggleArticle(newProject);
-    }
+    };
 
     return(
         <div className="table-container">

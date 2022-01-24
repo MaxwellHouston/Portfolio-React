@@ -16,7 +16,7 @@ const MoreArticles = () => {
         <div className="project-body">
             <div className="info">
                 <h1>Additonal Projects</h1>
-                <ProjectTable toggleArticle={toggleArticle} />
+                <ProjectTable toggleArticle={toggleArticle} moreArticle={moreArticle} />
             </div>
             <CodeViewer project={moreArticle} />
         </div>
