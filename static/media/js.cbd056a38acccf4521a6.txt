@@ -1,0 +1,309 @@
+<----------App.js------------->
+
+import './App.css';
+import React from 'react';
+import { ModeSelect } from './ModeSelect';
+import { FinderDropdown } from './FinderDropdown';
+import { EntryForm } from './EntryForm';
+import { ResultDisplay } from './ResultDisplay';
+
+export class App extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      tempInput: null,
+      solveFor: 'dp',
+      dp: '',
+      rh: '',
+      temp: '',
+      display: 'none'  
+    };
+    this.changeTemp = this.changeTemp.bind(this);
+    this.getType = this.getType.bind(this);
+    this.handleInput = this.handleInput.bind(this);
+    this.showResults = this.showResults.bind(this);
+  }
+
+  changeTemp(style){
+    this.setState(
+      {tempInput: style,
+        dp: '',
+        rh: '',
+        temp: '',
+        display: 'none'}
+    )
+  }
+
+  getType(type){
+    this.setState(
+      {solveFor: type,
+        dp: '',
+        rh: '',
+        temp: '',
+        display: 'none'}
+    )
+  }
+
+  handleInput(name,value) {
+    this.setState( {
+        [name]: value,
+        display: 'none'
+    } )
+  }
+
+  showResults() {
+    this.setState({
+      display: 'block'
+    })
+  }
+
+  render() {
+    const inputs = {
+      dp: this.state.dp,
+      rh: this.state.rh,
+      temp: this.state.temp
+    }
+    
+    return(
+      <div className="body">
+        <h1>Psychrometric Calculator</h1>
+        <div className="container">
+          <div className="about box">
+          <p className="text">
+            This Psychrometric Calculator takes in two inputs that you have and solves for the missing third value.
+            Depending on what inputs you have available, select which value to calculate from the dropdown menu.
+            Enter your values and hit submit to calculate the third value.
+            </p>
+          </div>
+        
+          <div className="options box">
+            <ModeSelect changeTemp={this.changeTemp} />
+            <FinderDropdown getType={this.getType} />
+          </div>
+          <div className="entry box">
+            <EntryForm
+            tempInput={this.state.tempInput}
+            solveFor={this.state.solveFor}  
+            handleInput={this.handleInput}
+            inputs={inputs} 
+            showResults={this.showResults}
+            />
+          </div>
+        </div>
+        <div className="results">
+          <ResultDisplay 
+            solveFor={this.state.solveFor}
+            inputs={inputs}
+            tempInput={this.state.tempInput}
+            display={this.state.display}
+          />
+        </div>
+          
+      </div>
+    )
+  }
+}
+
+<----------EntryForm.js------------->
+
+import React from "react";
+import './App.css';
+
+
+export class EntryForm extends React.Component{
+    constructor(props){
+        super(props);
+
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleChange ({target}) {
+        const {name, value} = target;
+        this.props.handleInput(name,value)
+    }
+
+    handleSubmit(event) {
+        event.preventDefault();
+        this.props.showResults();
+    }
+
+    render(){
+        let solveFor = this.props.solveFor;
+        const { rh,dp,temp } = this.props.inputs;
+        return(
+            <div className='entry'>
+                <form onSubmit={this.handleSubmit}>
+                    <label for='dp'>Dew Point:</label>
+                    {solveFor==='dp' ? <input type='text' id='dp' value='' disabled /> : 
+                    <input type='text' id='dp' name='dp' onChange={this.handleChange} value={dp}  />}               
+                    <br/>
+                    <label for='rh'>Relative Humidity:</label>
+                    {solveFor==='rh' ? <input type='text' id='rh' value='' disabled /> : 
+                    <input type='text' id='rh' name='rh' onChange={this.handleChange} value={rh} />}                
+                    <br/>
+                    <label for='temp'>Temprature:</label>
+                    {solveFor==='temp' ? <input type='text' id='temp' value='' disabled /> : 
+                    <input type='text' id='temp' name='temp' onChange={this.handleChange} value={temp} />} 
+                    <br/>
+                    <input type='submit' value='Calculate' /> 
+                </form>            
+            </div>
+        )
+
+    }
+
+}
+
+<----------FinderDropdown.js------------->
+
+import React from "react";
+import './App.css';
+
+
+export class FinderDropdown extends React.Component{
+    constructor(props){
+        super(props);
+        this.handleChange = this.handleChange.bind(this);
+    }
+    
+    handleChange(e){
+        let type = e.target.value;
+        this.props.getType(type);
+    }
+
+    render(){
+        return(
+            <div className='dropdown'>
+                    <h2>Calculate For:</h2>
+                <select name="calculate" onChange={this.handleChange} >
+                    <option value="dp">DewPoint</option>
+                    <option value="rh">Relative Humidity</option>
+                    <option value="temp">Temperature</option>
+                </select>
+            </div>
+        )
+    }
+} 
+
+<----------ModeSelect.js------------->
+
+import React from "react";
+import './App.css';
+
+
+export class ModeSelect extends React.Component{
+    constructor(props){
+        super(props);
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(e){
+        let style = e.target.value;
+        this.props.changeTemp(style)
+    }
+
+    render(){
+        return(
+            <div>
+                <form onChange={this.handleChange}>
+                    <h2>Choose Temperature Input</h2>
+                    <input type="radio" id="fahrenheit" name="tempInput" value="fahrenheit" />
+                    <label for="fahrenheit"> Fahrenheit </label>
+                    <input type="radio" id="celsius" name="tempInput" value="celsius" />
+                    <label for="celsius"> Celsius </label>
+                </form>
+            </div>
+        )
+    }
+}
+
+<----------ResultsDisplay.js------------->
+
+import React from 'react';
+import './App.css';
+import Library from '../Utility/Library';
+
+export const ResultDisplay = (props) => {
+
+    const solveFor = props.solveFor;
+    const tStyle = props.tempInput;
+    const { rh, temp, dp } = props.inputs;
+    const display = {
+        display: props.display,
+        textDecoration: 'underline #ff3b3f'
+    }
+
+
+    const displayResult = (solveFor,rh,temp,dp,tStyle) => {
+        switch(solveFor) {
+            case 'rh':
+                return `The Relative Humidity is ${Library.findRH(temp,dp,tStyle)}%`;
+            case 'dp':
+                return `The Dew Point is ${Library.findDP(rh,temp,tStyle)}`;
+            case 'temp':
+                return `The Temperature is ${Library.findTemp(rh,dp,tStyle)}`;
+            default: 
+                return '';
+        }
+    }
+
+       
+    return(
+        
+        <p style={display}>{displayResult(solveFor,rh,temp,dp,tStyle)}</p>)
+}
+
+<----------Library.js------------->
+
+/*converters*/
+
+const fToC = (tempF) => {
+    let tempC = (tempF-32)*(5/9);
+    return tempC;
+}
+
+const cToF = (tempC) => {
+    let tempF = (tempC*(9/5))+32;
+    return tempF;
+}
+
+
+const Library = {
+
+    findRH(T,Td,tempStyle) {
+    if(tempStyle === 'fahrenheit'){
+        T = fToC(T);
+        Td = fToC(Td);
+    }
+    let RH = 100 * (Math.exp((17.625*Td)/(243.04+Td))/Math.exp((17.625*T)/(243.04+T)));
+    return RH.toPrecision(3);
+    },
+
+    findDP(RH,T,tempStyle) {
+        if(tempStyle === 'fahrenheit'){
+            T = fToC(T);
+            let Tp = 243.04*(Math.log(RH/100)+((17.625*T)/(243.04+T)))/(17.625-Math.log(RH/100)-((17.625*T)/(243.04+T)));
+            return cToF(Tp).toPrecision(3);
+        }
+        else{
+            let Tp = 243.04*(Math.log(RH/100)+((17.625*T)/(243.04+T)))/(17.625-Math.log(RH/100)-((17.625*T)/(243.04+T)));
+            return Tp.toPrecision(3)
+        }
+    },    
+
+    findTemp(RH,Td,tempStyle) {
+        if(tempStyle === 'fahrenheit'){
+            Td = fToC(Td);
+            let T = 243.04*(((17.625*Td)/(243.04+Td))-Math.log(RH/100))/(17.625+Math.log(RH/100)-((17.625*Td)/(243.04+Td)));
+            return cToF(T).toPrecision(3);
+        }
+        else{
+            let T = 243.04*(((17.625*Td)/(243.04+Td))-Math.log(RH/100))/(17.625+Math.log(RH/100)-((17.625*Td)/(243.04+Td)));
+            return T.toPrecision(3);
+        }
+    }
+}
+
+
+export default Library;

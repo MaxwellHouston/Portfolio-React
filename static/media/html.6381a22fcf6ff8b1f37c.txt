@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Island Golf Club</title>
+        <link href="./CSS/style.CSS" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lobster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">    </head>
+    <header>
+        <div class="banner">
+            <h1>Island Golf Club</h1>
+        </div>
+        <nav>
+            <button id="courses" type="button">Course</button>
+            <button id="membership" type="button">Membership</button>
+            <button id="bar-grill" type="button">Bar & Grill</button>          
+        </nav>
+    </header>
+    <main>
+        <article id="course-section">
+            <h2>Here in Puerto Rico we have two amazing golf courses you can play.
+            </h2>
+            <div class="pineapple box">
+                
+                <img src="/Images/pineapple-layout.jpg" alt="Pinapple Course">
+                <h3>Play 18 at the Pineapple course!</h3>
+                <p>With picturesque views and a fairly flat layout, The Pinapple Course is fun for any age
+                    or skill level.
+                </p>
+            </div>
+            <div class="sugar box">
+               
+                <img src="/Images/sugar-layout.jpg" alt="Sugar Cane Course">   
+                <h3>Test your skill on the Sugar Cane Course!</h3>          
+                <p>The more challenging of the two courses, The Sugar Cane Course offers some of the most
+                    stunning ocean views.
+                </p>
+            </div>
+        </article>
+        <article id="membership-section">
+            <h2>Become a member today with Island Golf Club!</h2>
+            <div class="member box">
+                <h3>Chose a standard membership or upgrade
+                    to Premium.
+                </h3>
+                <table>
+                    <tr>
+                        <th id="table-head" scope="col">Island Golf</th>
+                        <th scope="col">
+                            Standard Membership
+                        </th>
+                        <th scope="col">
+                            Premium Membership
+                        </th>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            Use of Driving Range facilities.
+                        </th>
+                        <td>X</td>
+                        <td>X</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            No Green Fees or charges for golf cart use.
+                        </th>
+                        <td>X</td>
+                        <td>X</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            10% discount on all purchases at the club.
+                        </th>
+                        <td>X</td>
+                        <td>X</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            Exclusive use of a locker for clothes, showers, shoes, etc.
+                        </th>
+                        <td id="red"></td>
+                        <td>X</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            Participation in one tournament for members per year.
+                        </th>
+                        <td id="red"></td>
+                        <td>X</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            Availability of the facilities for one member activity per year.
+                        </th>
+                        <td id="red"></td>
+                        <td>X</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="form box">
+                <h3>Submit your membership request here!</h3>
+                <form action="index.html" method="POST">
+                    <label for="name">Name:</label>
+                    <input id="name" name="name" type="text">
+                    <hr>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                    <hr>
+                    <label for="phone">Phone Number:</label>
+                    <input type="number" id="phone" name="phone">
+                    <hr>
+                    <p>Choose your Membership</p>
+                    <br>
+                    <input type="radio" id="yearly" name="membership" value="yearly">
+                    <label for="yearly">Yearly Standard Membership: $3000 a year</label>
+                    <br>
+                    <input type="radio" id="two-year" name="membership" value="two-year">
+                    <label for="two-year">Two Year Standard Membership: $2600 a year</label>
+                    <br>
+                    <input type="radio" id="yearly-premium" name="membership" value="yearly-premium">
+                    <label for="yearly-premium">Yearly Premium Membership: $4000 a year</label>
+                    <hr>
+                    <input type="submit" value="Submit Membership Request">
+                </form>
+            </div>
+        </article>
+        <article id="bar-grill-section">
+            <h2>After your round come to our world class resturant or relax with a drink at our amazing bar.</h2>
+            <div class="bar box">
+                <img src="/Images/bar.jpg" alt="Bar">
+                <h3>1000+ liqours and wines to choose from!</h3>
+                <p>The best bartenders on the island will make any drink you can think up. Our knowledgeable staff
+                    can help you pick out the perfect wine for any occasion.
+                </p>
+            </div>
+            <div class="grill box">
+                <img src="/Images/grill.jpg" alt="Resturant">
+                <h3>Gourmet chefs that specialize in 5 different cullinary styles.</h3>
+                <p>Whatever you are craving after your round, you can find it at Island Golf Bar & Grill.
+                    From simple hamburgers and hotdogs to 5-star dinning, we offer it here.
+                </p>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <p>Project by: Max Houston for Codecademy - Responsive Club Website</p>
+        <a href='https://github.com/MaxwellHouston'><button type="button">github</button></a>
+    </footer>
+</html> 

@@ -1,0 +1,36 @@
+
+
+
+<------Sample Code-------------------->
+
+
+
+
+
+h1 {
+    font-family: Helvetica;
+    font-size: 100px;
+    font-weight: bold;
+    color: khaki;
+    text-align: center;
+    background-image: url('./images/pattern.jpeg');
+}
+h2 {
+    font-family: Helvetica;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+}
+#brushes h2 {
+    background-color: mediumspringgreen;
+}
+#frames h2 {
+    background-color: lightcoral;
+}
+#paint h2 {
+    background-color: skyblue;
+}
+strong {
+    font-family: Helvetica;
+    color: blue;
+}

@@ -1,0 +1,213 @@
+@font-face {
+    font-family: 'AXIS';
+    src: url('/fonts/Axis-Extrabold.otf') format('opentype');
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    display: grid;
+    grid-template: 100% / 20% 1fr 1fr;
+}
+
+header {
+    grid-area: 1 / 1 / 2 / 2;
+    background-color: #303030;
+}
+
+main {
+    grid-area: 1 / 2 / 2 / 4;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    align-content: center;
+}
+
+/*Header Nav*/
+
+header nav {
+    padding-bottom: 2rem;
+}
+
+header ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 0;
+}
+
+header li {
+    list-style: none;
+    margin: 2.5rem;
+}
+
+header button {
+    border: none;
+    font-size: 2rem;
+    background-color: #303030;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+/*Code Viewer*/
+
+#code-box {
+    grid-column: 2 / span 1;
+    text-align: center;
+    border: 2px solid #303030;
+    
+}
+
+#code-title {
+    background-color: #303030;
+    padding: .5rem 0;
+    color: #dfdfdf;
+    text-shadow: 2px 2px black;
+    font-size: 2rem;
+}
+
+#code-options {
+    border-top: 2px solid #303030;
+}
+
+object {
+    width: 100%;
+    height: 44rem;
+}
+
+#code-options ul {
+    display: flex;
+    justify-content: space-around;
+    background-color: #303030;
+    margin: 0;
+    padding: 1rem;
+}
+
+#code-options li {
+    list-style: none;
+    margin: 1rem;
+}
+
+#code-options button {
+    border: none;
+    color: white;
+    background-color: #303030;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px black;
+}
+/*Articles*/
+
+article {
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+    background-color: #dfdfdf;
+}
+
+article h1 {
+    text-align: center;
+    font-size: 5rem;
+    color: #303030;
+    text-shadow: 2px 2px 5px black;
+    font-family: 'AXIS', sans-serif;
+    margin: 0;
+}
+
+article p {
+    width: 55%;
+    line-height: 1.4;
+    background-color: #303030;
+    color: white;
+    padding: 2rem;
+    box-shadow: 3px 3px black;
+}
+
+.lang {
+    width: 75%;
+    text-align: center;
+}
+
+.lang ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.lang li {
+    margin: 2rem;
+}
+
+/*About Me*/
+
+#about {
+    z-index: 12;
+}
+
+#about a {
+    color: white;
+}
+
+/*Game of War*/
+
+#game {
+    z-index: 0;
+}
+
+/*Island Golf*/
+
+#island {
+    z-index: 3;
+}
+
+/*Portfolio*/
+
+#portfolio {
+    z-index: 5;
+}
+
+/*More Projects*/
+
+#more {
+    z-index: 7;
+}
+
+table {
+    border: 2px solid #303030;
+    border-collapse: collapse;
+    width: 75%;
+    font-size: 1.5rem;
+    background-color: white;
+}
+
+th, td {
+    border: 2px solid #303030;
+    padding: 1rem;
+    text-align: center;
+}
+
+thead, tfoot {
+    background-color: #303030;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+tfoot {
+    font-size: 1rem;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #bcbebc;
+  }
+   
+.project {
+    text-decoration: underline;
+    color: #4266a1;
+}

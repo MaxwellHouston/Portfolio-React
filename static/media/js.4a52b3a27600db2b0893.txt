@@ -1,0 +1,339 @@
+<--------Index.js------->
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+
+import { BrowserRouter as Router } from 'react-router-dom';
+
+ReactDOM.render(
+  <Router>
+    <App />
+  </Router>,
+  document.getElementById('root')
+);
+
+<--------App.js------->
+
+import React, {useState} from "react";
+import { Switch, Route, Redirect, NavLink } from "react-router-dom";
+import { AppointmentsPage } from "./containers/appointmentsPage/AppointmentsPage";
+import { ContactsPage } from "./containers/contactsPage/ContactsPage";
+
+function App() {
+  
+  const [contacts, setContacts] = useState([]);
+  const [appointments, setAppointments] = useState([]);
+
+  const ROUTES = {
+    CONTACTS: "/contacts",
+    APPOINTMENTS: "/appointments",
+  };
+
+
+  const handleAddContact = (contactObj) => {
+    setContacts(prev => [...prev, contactObj]) 
+  };
+
+  const handleAddAppointment = (appointmentObj) => {
+    setAppointments(prev => [...prev, appointmentObj])
+  }
+
+  return (
+    <>
+      <nav>
+        <NavLink to={ROUTES.CONTACTS} activeClassName="active">
+          Contacts
+        </NavLink>
+        <NavLink to={ROUTES.APPOINTMENTS} activeClassName="active">
+          Appointments
+        </NavLink>
+      </nav>
+      <main>
+        <Switch>
+          <Route exact path="/">
+            <Redirect to={ROUTES.CONTACTS} />
+          </Route>
+          <Route path={ROUTES.CONTACTS}>
+            <ContactsPage contacts={contacts} handleAddContact={handleAddContact} />
+          </Route>
+          <Route path={ROUTES.APPOINTMENTS}>
+            <AppointmentsPage contacts={contacts} appointments={appointments} handleAddAppointment={handleAddAppointment} />
+          </Route>
+        </Switch>
+      </main>
+    </>
+  );
+}
+
+export default App;
+
+<--------AppointmentsPage.js------->
+
+import React, { useState } from "react";
+import { AppointmentForm } from '../../components/appointmentForm/AppointmentForm';
+import { TileList } from "../../components/tileList/TileList";
+
+export const AppointmentsPage = (props) => {
+  
+  const[title, setTitle] = useState('');
+  const[contact, setContact] = useState('');
+  const[date, setDate] = useState('');
+  const[time, setTime] = useState('');
+  
+  const handleTitle = ({target}) => {
+    setTitle(target.value)
+  };
+  const handleContact = ({target}) => {
+    setContact(target.value)
+  };
+  const handleDate = ({target}) => {
+    setDate(target.value)
+  };
+  const handleTime = ({target}) => {
+    setTime(target.value)
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    let appointment = {
+      title: title,
+      contact: contact,
+      date: date,
+      time: time
+    }
+   props.handleAddAppointment(appointment);
+   setTitle('');
+   setContact('');
+   setDate('');
+   setTime('');
+  };
+
+  return (
+    <div>
+      <section>
+        <h2>Add Appointment</h2>
+        <AppointmentForm 
+        contacts={props.contacts}
+        title={title} 
+        contact={contact} 
+        date={date} 
+        time={time}
+        handleTitle={handleTitle}
+        handleContact={handleContact}
+        handleDate={handleDate} 
+        handleTime={handleTime}
+        handleSubmit={handleSubmit} />
+      </section>
+      <hr />
+      <section>
+        <h2>Appointments</h2>
+        <TileList array={props.appointments}/>
+      </section>
+    </div>
+  );
+};
+
+<--------ContactsPage.js------->
+
+import React, { useState, useEffect } from "react";
+import {ContactForm} from '../../components/contactForm/ContactForm';
+import {TileList} from '../../components/tileList/TileList';
+
+export const ContactsPage = (props) => {
+  
+  const [name, setName] = useState('');
+  const [number, setNumber] = useState();
+  const [email, setEmail] = useState('');
+  const[duplicate, setDuplicate] = useState(false);
+
+  useEffect(()=>{
+    let contacts = props.contacts;
+    for(const index of contacts){
+      if(index.name === name){
+        setDuplicate(true)
+      }else {
+        setDuplicate(false)
+      }
+    }
+  },[name, props.contacts]);
+
+
+  const handleNameInput = ({target}) => {
+    setName(target.value);
+  };
+  const handleNumberInput = ({target}) => {
+    setNumber(target.value);
+  };
+  const handleEmailInput = ({target}) => {
+    setEmail(target.value);
+  }
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if(duplicate){
+      alert('Duplicate name detected, please enter a different name');
+      return
+    }
+    let contact = {
+      name: name,
+      number: number,
+      email: email
+    };
+    props.handleAddContact(contact);
+    setName('');
+    setNumber('');
+    setEmail('');
+  };
+
+  return (
+    <div>
+      <section>
+        <h2>Add Contact</h2>
+        <ContactForm
+          duplicate={duplicate} 
+          handleNameInput={handleNameInput} 
+          handleNumberInput={handleNumberInput} 
+          handleEmailInput={handleEmailInput}
+          name={name} 
+          number={number} 
+          email={email}
+          handleSubmit={handleSubmit}
+        />
+      </section>
+      <hr />
+      <section>
+        <h2>Contacts</h2>
+        <TileList array={props.contacts}/>
+      </section>
+    </div>
+  );
+};
+
+<--------AppointmentForm.js------->
+
+import React from "react";
+import { ContactPicker } from '../contactPicker/ContactPicker';
+
+export const AppointmentForm = (props) => {
+  const getTodayString = () => {
+    const [month, day, year] = new Date()
+      .toLocaleDateString("en-US")
+      .split("/");
+    return `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`;
+  };
+  let today = getTodayString();
+  return (
+    <form onSubmit={props.handleSubmit}>
+      <p>Enter title:</p>
+      <input value={props.title} onChange={props.handleTitle} required />
+      <p>Enter appointment date:</p>
+      <input type='date' value={props.date} onChange={props.handleDate} min={today} required />
+      <p>Enter appointment time:</p>
+      <input type='time' value={props.time} onChange={props.handleTime} required />
+      <p>Select contact:</p>
+      <ContactPicker contacts={props.contacts} handleContact={props.handleContact} />
+      
+      <input type='submit' value='Add appointment' />
+    </form>
+  );
+};
+
+<--------ContactForm.js------->
+
+import React from "react";
+
+export const ContactForm = (props) => {
+
+  const duplicateStyle = {
+    backgroundColor: 'red',
+    color: 'white'
+  }
+  
+  return (
+    <form onSubmit={props.handleSubmit}>
+      <p>Enter Name:    
+      <span style={props.duplicate ? duplicateStyle : {display: 'none'}}>Duplicate name entered</span>
+      </p>
+      <input value={props.name} onChange={props.handleNameInput} required />
+      <p>Enter Number: <span style={{backgroundColor: 'white', color: 'grey'}}>xxx-xxx-xxxx</span></p>
+      <input pattern='\d{3}-\d{3}-\d{4}' value={props.number} onChange={props.handleNumberInput} required />
+      <p>Enter Email:</p>
+      <input type='email' value={props.email} onChange={props.handleEmailInput} required />
+      <br/>
+      <input type='submit' value='Add Contact' />
+    </form>
+  );
+};
+
+<--------ContactPicker.js------->
+
+import React from "react";
+
+export const ContactPicker = (props) => {
+
+  const renderContacts = (array) => {
+    let contacts = [];
+    for(const contact of array){
+      contacts.push(<option key={contacts.length} value={contact.name}>{contact.name}</option>)
+    }
+    return contacts;
+  }
+
+  return (
+    <select onChange={props.handleContact} required>
+      <option value='' />
+      {renderContacts(props.contacts)}
+    </select>
+  );
+};
+
+<--------TileList.js------->
+
+import React from "react";
+import { Tile } from '../tile/Tile';
+
+export const TileList = (props) => {
+
+  const renderTiles = (array) => {
+    let tiles = [];
+    for(const obj of array){
+     tiles.push(<Tile obj={obj} key={`list${tiles.length}`} />);
+    }
+    return tiles;
+  }
+
+
+  return (
+    <div>
+      {renderTiles(props.array)}
+    </div>
+  );
+};
+
+<--------Tile.js------->
+
+import React from "react";
+
+
+export const Tile = (props) => {
+  
+  const renderTile = (obj) => {
+    let tile = [];
+    for(const key in obj){
+      if(!tile.length){
+        tile.push(<p key={tile.length} className='tile-title'>{obj[key]}</p>)
+      }else{
+        tile.push(<p key={tile.length} className='tile'>{key}: {obj[key]}</p>)
+      }
+    };
+    
+    return tile;
+  }
+  return (
+    <div className="tile-container">
+      {renderTile(props.obj)}
+    </div>
+  );
+};

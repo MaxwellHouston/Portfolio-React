@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Company Homepage w/ Flexbox</title>
+        <link href="CSS/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="./images/MAXX logo.png" alt="Company Logo">
+                <h1>Property Restoration</h1>
+            </div>
+            <nav id="head-nav">
+                <a href="#mission"><button type="button">Mission</button></a>
+                <a href="#services"><button type="button">Services</button></a>
+                <a href="#crew"><button type="button">Team Leads</button></a>
+            </nav>
+        </header>
+        <main>
+            <article id="mission">
+                <h2>Our Mission</h2>
+                <p>Our top priority as a new property restoration company is to bring you the best possible
+                    customer service possible. We know there are many different choices when property damage
+                    occurs but we stand by being the best. With a personable <a href="#crew">staff</a> that 
+                    enjoys the work they do and a wealth of resource and knowledge at our disposal, 
+                    we can tackle any problem, big or small. These property damage situations can be some of the
+                    most trying times in our lives but MAXX Property Restoration will make sure you come out 
+                    on top like it never happened.
+                </p>
+            </article>
+            <article id="services">
+                <h2>Services</h2>
+                <div class="water box">
+                    <h3>Water Damage</h3>
+                    <img src="./images/cow-flood.jpg" alt="Flooded House">
+                    <p>Broken pipe? Toilet overflowing? Don't worry! MAXX Property Restoration can help.
+                       We have a fleet of extraction trucks ready to go, along with a warehouse full of 
+                       fans and dehumidifiers to take on any size water loss. We will show up up at your 
+                       home or business and extract the water, remove any damaged materials, set drying
+                       equipment and monitor the progress daily until everything has dryed out.
+                    </p>
+                </div>
+                <div class="fire box">
+                    <h3>Fire Damage</h3>
+                    <img src="./images/house-fire.jpg" alt="House on Fire">
+                    <p>Fires come in all shapes and sizes. Whether smoke from a small grease fire or a 
+                        house burned down to the studs, call MAXX Property Restoration. Our team is 
+                        certified in fire and smoke restoration and can help take you through this difficult 
+                        situation. We provide smoke cleaning services for areas not badly affected. We can
+                        also remove any damaged materials that are beyond cleaning. We guarentee no smoke
+                        odor will remain once we finish our job.
+                    </p>
+                </div>
+                <div class="mold box">
+                    <h3>Mold Damage</h3>
+                    <img src="./images/mold.jpg" alt="Mold Growing on Wall">
+                    <p>Mold in your home or work can be a terrifing prospect. Luckily at MAXX Property Restoration
+                        we have the best mold experts in the region. They will come out and asses the air quality,
+                        take smaples, and determine the health risks. Then our remediation team will set up proper
+                        containment barriers and use state of the art technology and machines to assure no spores
+                        will spread outside the work area while we remediate the area. Once done we preform another
+                        air quality check to make sure it was done right.
+                    </p>
+                </div>
+                <div class="construction box">
+                    <h3>Construction</h3>
+                    <img src="./images/construction.jpg" alt="Men Using Saw">
+                    <p>Along with the remediation side of property restoration we offer all of your putback and 
+                        rebuild needs at MAXX Property Restoration. With professional project managers and a whole 
+                        team of carpenters we can repair any damaged caused by the loss. We have completed rebuilds
+                        of entire houses from the slab up as well as small tasks like haning a new light fixture.
+                        We will make sure your property is handed back to you exaclty the way it was before the loss,
+                        or sometimes even better!
+                    </p>
+                </div>
+            </article>
+            <article id="crew">
+                <h2>Team Leads</h2>
+                <div class="crew manger">
+                    <h3>Project Manager</h3>
+                    <img src="./images/ricky-jones.jpg" alt="Head Project Manager">                   
+                    <h4>Ricky Jones</h4>
+                    <ul>
+                        <li>Experience: 15 years in construction management</li>
+                        <li>Hometown: Atlanta, Georgia</li>
+                        <li>Favorite Color: Blue</li>
+                    </ul>
+                </div>
+                <div class="crew water">
+                    <h3>Water Tech</h3>
+                    <img src="./images/bert-mason.jpg" alt="Head Water/Fire Tech">                   
+                    <h4>Bert Mason</h4>
+                    <ul>
+                        <li>Experience: 25 years in property restoration</li>
+                        <li>Hometown: Butte, Montana</li>
+                        <li>Favorite Movie: Airplane </li>
+                    </ul>
+                </div>
+                <div class="crew mold">
+                    <h3>Mold Specalist</h3>
+                    <img src="./images/sarah-randall.jpg" alt="Head Mold Tech">                   
+                    <h4>Sarah Randall</h4>
+                    <ul>
+                        <li>Experience: PHD in microbial growth</li>
+                        <li>Hometown: Atlanta, Georgia</li>
+                        <li>Favorite Food: Pizza</li>
+                    </ul>
+                </div>
+                <div class="crew owner">
+                    <h3>Owner</h3>
+                    <img src="./images/charles-johnson.jpg" alt="Company Owner">                  
+                    <h4>Charles Johnson</h4>
+                    <ul>
+                        <li>Experience: 30 years in construction</li>
+                        <li>Hometown: Seattle, Washington</li>
+                        <li>Favorite Artist: Pink Floyd</li>
+                    </ul>
+                </div>
+            </article>
+        </main>
+        <footer>
+            <a class="footer-logo" href="index.html"><img src="./images/MAXX logo.png" alt="Company Logo"></a>
+            <p>Website designed by: Max Houston for Codecademy project - Flexbox Homepage</p>
+            <nav id="foot-nav">
+                <ul>
+                    <li><a href="#mission">Mission</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#crew">Team Leads</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </body>
+</html>

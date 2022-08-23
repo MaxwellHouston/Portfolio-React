@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Inline Text Markups</title>
+        <link href='./styles.css' rel='stylesheet'>
+    </head>
+    <body>
+        <header>
+            <h1>Inline Elements</h1>
+            <h2>Text Markups</h2>
+        </header>
+        <main>
+            <table>
+                <tr>
+                    <th scope='col'>Name</th>
+                    <th scope='col'>Code</th>
+                    <th scope='col'>Use</th>
+                </tr>
+                <tr>
+                    <td>Bold</td>
+                    <td class='code'>&lt;b&gt;</td>
+                    <td>Makes text inside the element bold.</td>
+                </tr>
+                <tr>
+                    <td>Italic</td>
+                    <td class='code'>&lt;i&gt;</td>
+                    <td>Makes text inside the element italic.</td>
+                </tr>
+                <tr>
+                    <td>Super Script</td>
+                    <td class='code'>&lt;sup&gt;</td>
+                    <td>Makes text inside the element super script.</td>
+                </tr>
+                <tr>
+                    <td>Sub Script</td>
+                    <td class='code'>&lt;sub&gt;</td>
+                    <td>Makes text inside the element sub script.</td>
+                </tr>
+                <tr>
+                    <td>Line Break</td>
+                    <td class='code'>&lt;br&gt;</td>
+                    <td>Adds a line break to the text.</td>
+                </tr>
+                <tr>
+                    <td>Anchor</td>
+                    <td class='code'>&lt;a&gt;</td>
+                    <td>Creates a link to the href provided.</td>
+                </tr>
+                <tr>
+                    <td>Strong</td>
+                    <td class='code'>&lt;strong&gt;</td>
+                    <td>Content within element is consider of strong import<br><i>*Usually made bold by the browser*</i></td>
+                </tr>
+                <tr>
+                    <td>Emphasis</td>
+                    <td class='code'>&lt;em&gt;</td>
+                    <td>Content within element should be emphasised.<br><i>*Usually italicized by the browser*</i></td>
+                </tr>
+            </table>
+        </main>
+        <footer>
+            <h4>Project by Max Houston for Codecademy</h4>
+        </footer>
+    </body>
+</html>

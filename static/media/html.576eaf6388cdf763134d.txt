@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Website Style Guide Alpha</title>
+        <link href="CSS/style.css" rel="stylesheet"/>
+        <link href="./CSS/grid-style.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@300;400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400&family=Rajdhani:wght@300;400;700&display=swap" rel="stylesheet">
+    </head>
+    <main>
+        <header>
+            <h1>Style Guide Alpha</h1>
+        </header>
+        <img class="logo" src="Images/code-logo.png" alt="Bussines logo"/>
+        <nav class="nav-bar">           
+            <ul>
+                <li><a href="#colors">Colors</a></li>
+                <li><a href="#fonts">Fonts</a></li>
+                <li><a href="#text">Text Styles</a></li>
+                <li><a href="#layout">Layout</a></li>
+                <li><a href="#example">Example</a></li>
+            </ul>
+        </nav>
+        <body>
+            <article>
+                <section class="section" id="colors">
+                    <h2>Colors</h2>
+                    <div class="color-grid">
+                        <div class="stormy">
+                            <p>Stormy</p>
+                            <p>#494E6B</p>
+                        </div>
+                        <div class="cloud">
+                            <p>Cloud</p>
+                            <p>#98878F</p>
+                        </div>
+                        <div class="sunset">
+                            <p>Sunset</p>
+                            <p>#985E6D</p>
+                        </div>
+                        <div class="evening">
+                            <p>Evening</p>
+                            <p>#192231</p>
+                        </div>
+                    </div>                                                      
+                    <p class="note">Color scheme found on <a href="https://www.canva.com/learn/website-color-schemes">https://www.canva.com/learn/website-color-schemes</a></p>
+                </section>
+                <section class="section" id="fonts">
+                    <h2>Fonts</h2>
+                    <div class="font-grid">
+                        <div class="font-box" id="rajdhani">
+                            <h3>Rajdhani</h3>
+                            <p class="regular">
+                                A good sample sentence to compare fonts.
+                            </p>
+                            <p class="light">
+                                A good sample sentence to compare fonts.
+                            </p>
+                            <p class="bold">
+                                A good sample sentence to compare fonts.
+                            </p>
+                        </div>
+                        <div class="font-box" id="pt-sans">
+                            <h3>PT Sans</h3>
+                            <p class="regular">
+                                A good sample sentence to compare fonts.
+                            </p>
+                            <p class="italic">
+                                A good sample sentence to compare fonts.
+                            </p>
+                            <p class="bold">
+                                A good sample sentence to compare fonts.
+                            </p>
+                        </div>
+                        <div class="font-box" id="encode-sans">
+                            <h3>Encode Sans SC</h3>
+                            <p class="regular">
+                                A good sample sentence to compare fonts.
+                            </p>
+                            <p class="light">
+                                A good sample sentence to compare fonts.
+                            </p>
+                            <p class="bold">
+                                A good sample sentence to compare fonts.
+                        </div>
+                    </div>                                                                    
+                </section>
+                <section class="section" id="text">
+                    <h2>Text Style</h2>
+                    <div class="text-style">
+                        <div class="h1-style">
+                            <h3>H1: Main Heading</h3>       
+                            <ul>
+                                <li>Font-size: 90px</li>
+                                <li>Font-Weight: 700</li>
+                                <li>Font-Family: Encode Sans SC</li>
+                            </ul>                      
+                        </div>
+                        <div class="h2-style">
+                            <h3>H2: Section Headings</h3>
+                            <ul>
+                                <li>Font-size: 80px</li>
+                                <li>Font-Weight: 700</li>
+                                <li>Font-Family: Encode Sans SC</li>
+                            </ul>                       
+                        </div>
+                        <div class="nav-style">
+                            <h3>H2: Navigation Links</h3>
+                            <ul>
+                                <li>Font Size: 25px</li>
+                                <li>Font-Weight: 700</li>
+                                <li>Font-Family: Rajdhani</li>
+                            </ul>
+                        </div>
+                        <div class="h3-style">
+                            <h3>H3: Font Headings</h3>
+                            <ul>
+                                <li>Font-Size: 30px</li>
+                                <li>Font-Weight: 700</li>
+                                <li>Font-Family: Encode Sans SC, PT Sans, Rajdhani</li>
+                            </ul>
+                        </div>                     
+                        <div class="p-style">
+                            <p>P: Paragraph Text</p>
+                            <ul>
+                                <li>Font-Size: 16px</li>
+                                <li>Font-Weight: 400</li>
+                                <li>Font-Family: PT Sans</li>
+                            </ul>
+                        </div>
+                    </div>                
+                </section>
+                <section class="section" id="layout">
+                    <h2>Layout</h2>
+                    <img src="./Images/system-alpha-layout.png" alt="Wireframe layout of website"/>
+                </section>
+                <section class="section" id="example">
+                    <h2>Example Page</h2>
+                    <img src="./Images/example.png" alt="Example of website Alpha"/>
+                </section>
+            </article>
+        </body>
+        <footer>
+            <div class="footer-grid"><p>
+                This website was made for the Codecademy project Web Style Guide.
+                <br>Website created by: Max Houston
+             </p>
+             <p>
+                Click the link to see the rest of my work on GitHub.com
+             </p>
+             <a class="github" href="https://github.com/MaxwellHouston>"><img src="./Images/GitHub-logo.png" alt="Link to Github page"/></a>
+            </div>                             
+        </footer>
+    </main>  
+</html>
