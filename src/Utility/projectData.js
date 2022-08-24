@@ -1,68 +1,6 @@
-//About
-import aboutImg from '../Utility/codes/about/img.jpg';
-import aboutHTML from '../Utility/codes/about/html.txt';
-import aboutCSS from '../Utility/codes/about/css.txt';
-import aboutJS from '../Utility/codes/about/js.txt';
-//gameOfWar
-import gameImg from '../Utility/codes/gameOfWar/img.jpg';
-import gameHTML from '../Utility/codes/gameOfWar/html.txt';
-import gameCSS from '../Utility/codes/gameOfWar/css.txt';
-import gameJS from '../Utility/codes/gameOfWar/js.txt';
-//Golf Island
-import golfIslandImg from '../Utility/codes/golfIsland/img.jpg';
-import golfIslandHTML from '../Utility/codes/golfIsland/html.txt';
-import golfIslandCSS from '../Utility/codes/golfIsland/css.txt';
-//import golfIslandJS from '../Utility/codes/golfIsland/js.txt';
-//Portfolio
-import portfolioImg from '../Utility/codes/portfolio/img.jpg';
-import portfolioHTML from '../Utility/codes/portfolio/html.txt';
-import portfolioCSS from '../Utility/codes/portfolio/css.txt';
-import portfolioJS from '../Utility/codes/portfolio/js.txt';
-//Flexbox
-import flexboxImg from '../Utility/codes/flexbox/img.jpg';
-import flexboxHTML from '../Utility/codes/flexbox/html.txt';
-import flexboxCSS from '../Utility/codes/flexbox/css.txt';
-//import flexboxJS from '../Utility/codes/flexbox/js.txt';
-// Fotomatic
-import fotomaticImg from '../Utility/codes/fotomatic/img.jpg';
-import fotomaticHTML from '../Utility/codes/fotomatic/html.txt';
-import fotomaticCSS from '../Utility/codes/fotomatic/css.txt';
-//import fotomaticJS from '../Utility/codes/fotomatic/js.txt';
-//CheatSheet
-import cheatSheetImg from '../Utility/codes/cheatSheet/img.jpg';
-import cheatSheetHTML from '../Utility/codes/cheatSheet/html.txt';
-import cheatSheetCSS from '../Utility/codes/cheatSheet/css.txt';
-//import cheatSheetJS from '../Utility/codes/cheatSheet/js.txt';
-//StyleGuide
-import styleGuideImg from '../Utility/codes/styleGuide/img.jpg';
-import styleGuideHTML from '../Utility/codes/styleGuide/html.txt';
-import styleGuideCSS from '../Utility/codes/styleGuide/css.txt';
-//import styleGuideJS from '../Utility/codes/styleGuide/js.txt';
-//Calculator
-import calculatorImg from '../Utility/codes/calculator/img.jpg';
-import calculatorHTML from '../Utility/codes/calculator/html.txt';
-import calculatorCSS from '../Utility/codes/calculator/css.txt';
-import calculatorJS from '../Utility/codes/calculator/js.txt';
-//Appointment
-import appointmentImg from '../Utility/codes/appointment/img.jpg';
-import appointmentHTML from '../Utility/codes/appointment/html.txt';
-import appointmentCSS from '../Utility/codes/appointment/css.txt';
-import appointmentJS from '../Utility/codes/appointment/js.txt';
-//Front Page
-import frontPageImg from '../Utility/codes/frontPage/img.jpg';
-import frontPageHTML from '../Utility/codes/frontPage/html.txt';
-import frontPageCSS from '../Utility/codes/frontPage/css.txt';
-import frontPageJS from '../Utility/codes/frontPage/js.txt';
-//Empty
-import empty from '../Utility/codes/empty.txt';
-
 
 const ProjectData = {
 
-    empty: {
-        name: 'empty',
-        txt: empty
-    },
     about: {
         header: 'About Me ',
         article: `My name is Max Houston and I am currently learning how to be a full stack engineer through Codecademy. 
@@ -73,11 +11,8 @@ const ProjectData = {
                 page will always have my most recent work. I would love to hear any feedback you have on my projects 
                 as I still have a whole lot to learn.`,
         email: 'maxhouston@gmail.com',
-        github: 'https://github.com/MaxwellHouston',    
-        img: aboutImg,
-        html: aboutHTML,
-        css: aboutCSS,
-        js: aboutJS,
+        github: 'https://github.com/MaxwellHouston',
+        images: []
     },
     gameOfWar: {
         header: 'Game of War',
@@ -86,11 +21,8 @@ const ProjectData = {
                 then while learning HTML and CSS I made it playable on a web browser. Everytime I learn something
                 relevant I add to the project.`,
         github: 'https://github.com/MaxwellHouston/Game_of_War',
-        img: gameImg,
-        html: gameHTML,
-        css: gameCSS,
-        js: gameJS,
-
+        images: []
+        
     },
     calculator: {
         header: 'Psychrometric Calculator',
@@ -99,11 +31,8 @@ const ProjectData = {
                 The main use for this web app is to help make calculations for 
                 people working in the Water Mitigation field, or studying Psychrometrics.`,
         github: 'https://github.com/MaxwellHouston/Psychrometric-Calculator',
-        img: calculatorImg,
-        html: calculatorHTML,
-        css: calculatorCSS,
-        js: calculatorJS,
-
+        images: []
+        
     },
     frontPage: {
         header: 'Front Page',
@@ -112,72 +41,18 @@ const ProjectData = {
         displayed in a grid with tumbnail photos and a link to the full article. When clicked, this link opens up that article to fill the whole page and displays the awards, upvotes, the body of
         the article, and also fetches and displays the comments section. Only the components are shown in the code viewer, to view the Redux store and slice files go to the github project link.`,
         github: 'https://github.com/MaxwellHouston/front-page',
-        img: frontPageImg,
-        html: frontPageHTML,
-        css: frontPageCSS,
-        js: frontPageJS,
+        images: []
+        
     },
-    more: {
-        flexbox: {
-            name: 'Flexbox',
-            value: 'flexbox',
-            img: flexboxImg,
-            html: flexboxHTML,
-            css: flexboxCSS,
-            //js: flexboxJS,
-            github: <a href="https://github.com/MaxwellHouston/Flexbox-Homepage">Link</a>
-    },
-      fotomatic:  {
-            name: 'Fotomatic',
-            img: fotomaticImg,
-            html: fotomaticHTML,
-            css: fotomaticCSS,
-            //js: fotomaticJS,
-            github: <a href="https://github.com/MaxwellHouston/Fotomatic">Link</a>
-    },
-      cheatSheet:  {
-            name: 'CheatSheet',
-            img: cheatSheetImg,
-            html: cheatSheetHTML,
-            css: cheatSheetCSS,
-            //js: cheatSheetJS,
-            github: <a href="https://github.com/MaxwellHouston/CheatSheet">Link</a>
-    },
-      styleGuide:  {
-            name: 'Style Guide',
-            img: styleGuideImg,
-            html: styleGuideHTML,
-            css: styleGuideCSS,
-            //js: styleGuideJS,
-            github: <a href="https://github.com/MaxwellHouston/Web-Design-System">Link</a>
-    },
-      golfIsland:  {
-            name: 'Golf Island',
-            img: golfIslandImg,
-            html: golfIslandHTML,
-            css: golfIslandCSS,
-            //js: golfIslandJS,
-            github: <a href="https://github.com/MaxwellHouston/Responsive-Club-Website">Link</a>
-    },
-      portfolio:  {
-            name: 'Portfolio',
-            img: portfolioImg,
-            html: portfolioHTML,
-            css: portfolioCSS,
-            js: portfolioJS,
-            github: <a href="https://github.com/MaxwellHouston/Porfolio-react">Link</a>
-    },
-      appointment:  {
-            name: 'Appointment',
-            img: appointmentImg,
-            html: appointmentHTML,
-            css: appointmentCSS,
-            js: appointmentJS,
-            github: <a href="https://github.com/MaxwellHouston/appointment-planner">Link</a>
-     }
+    maxsports: {
+        header: 'Max Sports',
+        article: `This project is a mock e-commerce web app that I built for the Codecademy curriculum. I have always loved sports, so I decided to base the inventory and design on a sporting goods store. 
+        The project consists of three main sections, a PostgreSQL database, a back end built with Node.js, and the front end, which is built using React. The project is hosted on Heroku, and the link is provided below. 
+        Building a project of this size really tested me as a young developer but helped me find many ways of overcoming and solving problems on my own. Overall, it was a great learning experience and really gave me confidence in my coding ability. `,
+        github: 'https://github.com/MaxwellHouston/E-Commerce-Full-Stack',
+        deployment: 'https://max-ecommerce-fullstack.herokuapp.com/',
+        images: []
     }
-    
-    
 }
 
 

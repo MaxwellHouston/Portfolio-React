@@ -1,8 +1,5 @@
 import React from "react";
 import '../App.css';
-import CodeViewer from "./CodeViewer";
-
-
 
 const Article = ({project}) => {
 
@@ -14,7 +11,6 @@ const Article = ({project}) => {
                 {project.email && <p className="email">Email: <a href={`mailto:${project.email}`}>{project.email}</a></p>}
                 <p className="github">Github: <a href={project.github}>{project.github}</a></p>
             </div>
-            <CodeViewer project={project} />
         </div>
         
     )
