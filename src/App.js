@@ -11,9 +11,10 @@ function App() {
       <div className='project-container'>
         <Routes>
             <Route path='/' element={<Article project={projectData.about} />} />
-            <Route path='game-of-war' element={<Article project={projectData.gameOfWar} />} />
-            <Route path='calculator' element={<Article project={projectData.calculator} />} />
-            <Route path='front-page' element={<Article project={projectData.frontPage} />} />
+            <Route path='/maxsports' element={<Article project={projectData.maxsports} />} />
+            <Route path='/game-of-war' element={<Article project={projectData.gameOfWar} />} />
+            <Route path='/calculator' element={<Article project={projectData.calculator} />} />
+            <Route path='/front-page' element={<Article project={projectData.frontPage} />} />
         </Routes>
       </div>
         
