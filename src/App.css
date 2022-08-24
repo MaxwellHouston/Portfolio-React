@@ -15,9 +15,8 @@
 
 .App {
   display: flex;
-  width: 99vw;
-  height: 99vh;
   font-family: 'Atkinson Hyperlegible';
+  overflow: hidden;
 }
 
 /*    Side Bar     */
@@ -34,10 +33,10 @@
 
 .side-bar li {
   list-style: none;
-  padding: 2rem;
+  padding: 1rem;
   margin-top: 3rem;
   text-align: center;
-  font-size: 3rem;
+  font-size: 2rem;
   text-shadow: 2px 2px black;
 }
 
