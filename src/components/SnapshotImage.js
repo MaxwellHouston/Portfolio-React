@@ -1,10 +1,10 @@
 
-export const SnapshotImage = ({path, number}) => {
+export const SnapshotImage = ({path, number, openModal}) => {
 
     const imgPath = require(`../Utility/Images/${path}/snapshot-${number}.jpg`);
 
-    const handleClick = ({target}) => {
-        console.log(target.src)
+    const handleClick = () => {
+        openModal(path, number);
     }
 
     return(
