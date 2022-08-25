@@ -3,6 +3,7 @@ import Nav from './components/Nav';
 import { Routes, Route } from 'react-router-dom';
 import Article from './components/Article';
 import projectData from './Utility/projectData';
+import { Footer } from './components/Footer';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
             <Route path='/front-page' element={<Article project={projectData.frontPage} />} />
         </Routes>
       </div>
-        
+      <Footer />    
     </div>
   );
 }

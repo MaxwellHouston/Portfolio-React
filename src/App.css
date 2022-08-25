@@ -15,6 +15,7 @@
 
 .App {
   display: flex;
+  flex-wrap: wrap;
   font-family: 'Atkinson Hyperlegible';
 }
 
@@ -139,6 +140,15 @@ h1 {
 }
 
 .snapshot:hover {
-  border: 2px solid #fff;
   box-shadow: 5px 5px 5px #fff;
+}
+
+/*    Footer    */
+
+.footer {
+  background-color: #303030;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  line-height: 2rem;
 }
