@@ -1,30 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import '../App.css';
-import { SnapshotImage } from "./SnapshotImage";
-
+import { ImageModal } from "./ImageModal";
+import { Snapshots } from "./Snapshots";
+import CloseIcon from '@mui/icons-material/Close';
 const Article = ({project}) => {
 
-    const renderPhotos = () => {
-        let images = [];
-        for(let i = 1; i < 7; i++){
-            images.push(<SnapshotImage key={i} path={project.imgPath} number={i} />)
-        };
-        return images;
+    const [showModal, setShowModal] = useState(false);
+    const [modalImg, setModalImg] = useState('');
+
+    const closeModal = () => {
+        setShowModal(false);
+        setModalImg('');
+    };
+
+    const openModal = (url) => {
+        setModalImg(url);
+        setShowModal(true);
     }
 
     return (
         <div className="project-body">
+            <ImageModal show={showModal} closeModal={closeModal} imgUrl={modalImg} />
+            <CloseIcon />
             <div className="info">
                 <h1>{project.header}</h1>
                 <p className="article">{project.article}</p>
                 {project.email && <p className="email">Email: <a href={`mailto:${project.email}`}>{project.email}</a></p>}
                 <p className="github">Github: <a href={project.github}>{project.github}</a></p>
             </div>
-            <div className="snapshot-container">
-                <div className="img-grid">
-                    {renderPhotos()}
-                </div>
-            </div>
+            <Snapshots project={project} showModal={showModal} />
         </div>
     )
 };
