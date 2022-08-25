@@ -21,7 +21,6 @@ const Article = ({project}) => {
                 <p className="github">Github: <a href={project.github}>{project.github}</a></p>
             </div>
             <div className="snapshot-container">
-                <h2>Project Snapshot</h2>
                 <div className="img-grid">
                     {renderPhotos()}
                 </div>
