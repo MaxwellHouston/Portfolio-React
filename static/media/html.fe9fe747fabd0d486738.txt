@@ -1,1 +1,0 @@
-No HTML used. This is a React-Redux project that uses JSX in the JavaScript files.

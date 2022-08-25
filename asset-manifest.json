@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.8761ec56.css",
-    "main.js": "/static/js/main.da2e91b8.js",
-    "static/media/img.jpg": "/static/media/img.9a8a96d682afd97f278c.jpg",
+    "main.css": "/static/css/main.4718cefb.css",
+    "main.js": "/static/js/main.da7c776b.js",
+    "static/media/snapshot-1.jpg": "/static/media/snapshot-1.a59acb092385330f2180.jpg",
     "static/media/logo.png": "/static/media/logo.1af7403bb88188890af3.png",
+    "static/media/snapshot-2.jpg": "/static/media/snapshot-2.efc5597d67d998317c40.jpg",
+    "static/media/snapshot-4.jpg": "/static/media/snapshot-4.78d9d72965ca2868eeaa.jpg",
+    "static/media/snapshot-5.jpg": "/static/media/snapshot-5.1b7866d7a17095b81705.jpg",
+    "static/media/snapshot-6.jpg": "/static/media/snapshot-6.9f507d87fe8cdb1b1464.jpg",
+    "static/media/snapshot-3.jpg": "/static/media/snapshot-3.8e20a1c1e654d54b8a2e.jpg",
     "static/media/OpenSans-Regular.ttf": "/static/media/OpenSans-Regular.d7d7b8359eeb9cddfba6.ttf",
     "static/media/AtkinsonHyperlegible-Regular.ttf": "/static/media/AtkinsonHyperlegible-Regular.b67275748172037676f3.ttf",
     "static/media/Axis Extrabold.otf": "/static/media/Axis Extrabold.95bd71da29324fafdfa0.otf",
-    "static/media/js.txt": "/static/media/js.5d0d991c48680c72552f.txt",
-    "static/media/css.txt": "/static/media/css.978e56025bd4879032a3.txt",
-    "static/media/html.txt": "/static/media/html.fe9fe747fabd0d486738.txt",
     "index.html": "/index.html",
-    "static/media/empty.txt": "/static/media/empty.6a647b1e2f22a0899b08.txt",
-    "main.8761ec56.css.map": "/static/css/main.8761ec56.css.map",
-    "main.da2e91b8.js.map": "/static/js/main.da2e91b8.js.map"
+    "main.4718cefb.css.map": "/static/css/main.4718cefb.css.map",
+    "main.da7c776b.js.map": "/static/js/main.da7c776b.js.map"
   },
   "entrypoints": [
-    "static/css/main.8761ec56.css",
-    "static/js/main.da2e91b8.js"
+    "static/css/main.4718cefb.css",
+    "static/js/main.da7c776b.js"
   ]
 }
