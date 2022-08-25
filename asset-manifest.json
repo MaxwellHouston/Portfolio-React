@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.4718cefb.css",
-    "main.js": "/static/js/main.da7c776b.js",
-    "static/media/snapshot-1.jpg": "/static/media/snapshot-1.a59acb092385330f2180.jpg",
-    "static/media/logo.png": "/static/media/logo.1af7403bb88188890af3.png",
-    "static/media/snapshot-2.jpg": "/static/media/snapshot-2.efc5597d67d998317c40.jpg",
-    "static/media/snapshot-4.jpg": "/static/media/snapshot-4.78d9d72965ca2868eeaa.jpg",
-    "static/media/snapshot-5.jpg": "/static/media/snapshot-5.1b7866d7a17095b81705.jpg",
-    "static/media/snapshot-6.jpg": "/static/media/snapshot-6.9f507d87fe8cdb1b1464.jpg",
-    "static/media/snapshot-3.jpg": "/static/media/snapshot-3.8e20a1c1e654d54b8a2e.jpg",
-    "static/media/OpenSans-Regular.ttf": "/static/media/OpenSans-Regular.d7d7b8359eeb9cddfba6.ttf",
-    "static/media/AtkinsonHyperlegible-Regular.ttf": "/static/media/AtkinsonHyperlegible-Regular.b67275748172037676f3.ttf",
-    "static/media/Axis Extrabold.otf": "/static/media/Axis Extrabold.95bd71da29324fafdfa0.otf",
-    "index.html": "/index.html",
-    "main.4718cefb.css.map": "/static/css/main.4718cefb.css.map",
-    "main.da7c776b.js.map": "/static/js/main.da7c776b.js.map"
+    "main.css": "/Portfolio-React/static/css/main.675e3e6a.css",
+    "main.js": "/Portfolio-React/static/js/main.8236591f.js",
+    "static/media/snapshot-1.jpg": "/Portfolio-React/static/media/snapshot-1.a59acb092385330f2180.jpg",
+    "static/media/logo.png": "/Portfolio-React/static/media/logo.1af7403bb88188890af3.png",
+    "static/media/snapshot-2.jpg": "/Portfolio-React/static/media/snapshot-2.efc5597d67d998317c40.jpg",
+    "static/media/snapshot-4.jpg": "/Portfolio-React/static/media/snapshot-4.78d9d72965ca2868eeaa.jpg",
+    "static/media/snapshot-5.jpg": "/Portfolio-React/static/media/snapshot-5.1b7866d7a17095b81705.jpg",
+    "static/media/snapshot-6.jpg": "/Portfolio-React/static/media/snapshot-6.9f507d87fe8cdb1b1464.jpg",
+    "static/media/snapshot-3.jpg": "/Portfolio-React/static/media/snapshot-3.8e20a1c1e654d54b8a2e.jpg",
+    "static/media/OpenSans-Regular.ttf": "/Portfolio-React/static/media/OpenSans-Regular.d7d7b8359eeb9cddfba6.ttf",
+    "static/media/AtkinsonHyperlegible-Regular.ttf": "/Portfolio-React/static/media/AtkinsonHyperlegible-Regular.b67275748172037676f3.ttf",
+    "static/media/Axis Extrabold.otf": "/Portfolio-React/static/media/Axis Extrabold.95bd71da29324fafdfa0.otf",
+    "index.html": "/Portfolio-React/index.html",
+    "main.675e3e6a.css.map": "/Portfolio-React/static/css/main.675e3e6a.css.map",
+    "main.8236591f.js.map": "/Portfolio-React/static/js/main.8236591f.js.map"
   },
   "entrypoints": [
-    "static/css/main.4718cefb.css",
-    "static/js/main.da7c776b.js"
+    "static/css/main.675e3e6a.css",
+    "static/js/main.8236591f.js"
   ]
 }
