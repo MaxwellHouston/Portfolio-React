@@ -11,7 +11,7 @@ function App() {
       <Nav />
       <div className='project-container'>
         <Routes>
-            <Route path='/' element={<Article project={projectData.about} />} />
+            <Route path='/portfolio-react' element={<Article project={projectData.about} />} />
             <Route path='/maxsports' element={<Article project={projectData.maxsports} />} />
             <Route path='/game-of-war' element={<Article project={projectData.gameOfWar} />} />
             <Route path='/calculator' element={<Article project={projectData.calculator} />} />

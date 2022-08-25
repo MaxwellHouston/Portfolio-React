@@ -21,7 +21,7 @@ const Nav = () => {
         <div className="side-bar">
             <img id='logo' src={logo} alt="Portfolio Logo" />
             <ul className="nav-list">
-                <Link className="link" to="/" style = {page === '/' ? highlighted : null}><li id='about-me-link'>About Me</li></Link>
+                <Link className="link" to="/portfolio-react" style = {page === '/portfolio-react' ? highlighted : null}><li id='about-me-link'>About Me</li></Link>
                 <li id="project-divider">Projects</li>
                 <Link className="link" to="/maxsports" style = {page === '/maxsports' ? highlighted : null}><li>Max Sports</li></Link>
                 <Link className="link" to="/game-of-war" style = {page === '/game-of-war' ? highlighted : null} ><li>Game of War</li></Link>

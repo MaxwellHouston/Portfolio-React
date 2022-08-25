@@ -1,5 +1,5 @@
 {
-  "homepage": "https://maxwellhouston.github.io/Portfolio-React",
+  "homepage": "https://maxwellhouston.github.io/Portfolio-React/",
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
@@ -47,5 +47,7 @@
   },
   "devDependencies": {
     "gh-pages": "^4.0.0"
-  }
+  },
+
+  "proxy": "http://localhost:3000/"
 }
