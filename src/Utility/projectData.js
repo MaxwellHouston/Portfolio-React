@@ -12,7 +12,7 @@ const ProjectData = {
                 as I still have a whole lot to learn.`,
         email: 'maxhouston@gmail.com',
         github: 'https://github.com/MaxwellHouston',
-        images: []
+        imgPath: 'about'
     },
     gameOfWar: {
         header: 'Game of War',
@@ -21,7 +21,7 @@ const ProjectData = {
                 then while learning HTML and CSS I made it playable on a web browser. Everytime I learn something
                 relevant I add to the project.`,
         github: 'https://github.com/MaxwellHouston/Game_of_War',
-        images: []
+        imgPath: 'game-of-war'
         
     },
     calculator: {
@@ -31,7 +31,7 @@ const ProjectData = {
                 The main use for this web app is to help make calculations for 
                 people working in the Water Mitigation field, or studying Psychrometrics.`,
         github: 'https://github.com/MaxwellHouston/Psychrometric-Calculator',
-        images: []
+        imgPath: 'calculator'
         
     },
     frontPage: {
@@ -41,7 +41,7 @@ const ProjectData = {
         displayed in a grid with tumbnail photos and a link to the full article. When clicked, this link opens up that article to fill the whole page and displays the awards, upvotes, the body of
         the article, and also fetches and displays the comments section. Only the components are shown in the code viewer, to view the Redux store and slice files go to the github project link.`,
         github: 'https://github.com/MaxwellHouston/front-page',
-        images: []
+        imgPath: 'front-page'
         
     },
     maxsports: {
@@ -51,7 +51,7 @@ const ProjectData = {
         Building a project of this size really tested me as a young developer but helped me find many ways of overcoming and solving problems on my own. Overall, it was a great learning experience and really gave me confidence in my coding ability. `,
         github: 'https://github.com/MaxwellHouston/E-Commerce-Full-Stack',
         deployment: 'https://max-ecommerce-fullstack.herokuapp.com/',
-        images: []
+        imgPath: 'maxsports'
     }
 }
 
